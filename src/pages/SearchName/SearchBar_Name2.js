@@ -12,7 +12,7 @@ const SearchBarName2 = ({ setListData }) => {
         onKeyUp={(e) => {
             if (e.key === "Enter") {
                 console.log("-------------------")
-                axios.post('http://localhost:4000/students/temp2', { "name": value, "Common": value1 })
+                axios.post('https://chile-back.onrender.com/students/temp2', { "name": value, "Common": value1 })
                     .then((response) => {
                         setListData(response.data)
                         console.log("response.data", response.data);
@@ -34,7 +34,7 @@ const SearchBarName2 = ({ setListData }) => {
             </div>
             <div style={{ display: "flex", justifyContent: "center", marginTop: "30px" }}>
                 <button className="searchButton1" onClick={() => {
-                    axios.post('http://localhost:4000/students/temp2', { "name": value, "Common": value1 })
+                    axios.post('https://chile-back.onrender.com/students/temp2', { "name": value, "Common": value1 })
                         .then((response) => {
                             setListData(response.data)
                             console.log("response.data", response.data);

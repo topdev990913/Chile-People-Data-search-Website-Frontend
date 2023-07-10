@@ -13,7 +13,7 @@ const SearchBarName146 = ({ setListData }) => {
         <div className="searchbar_out" onKeyUp={(e) => {
             if (e.key === "Enter") {
                 console.log("-------------------")
-                axios.post('http://localhost:4000/students/temp146', { "name": value, "Address": value1, "Salud": value2, "DV": value3 })
+                axios.post('https://chile-back.onrender.com/students/temp146', { "name": value, "Address": value1, "Salud": value2, "DV": value3 })
                 .then((response) => {
                     setListData(response.data)
                     console.log("response.data", response.data);
@@ -41,7 +41,7 @@ const SearchBarName146 = ({ setListData }) => {
             </div>
             <div style={{ display: "flex", justifyContent: "center", marginTop: "30px" }}>
                 <button className="searchButton1" onClick={() => {
-                    axios.post('http://localhost:4000/students/temp146', { "name": value, "Address": value1, "Salud": value2, "DV": value3 })
+                    axios.post('https://chile-back.onrender.com/students/temp146', { "name": value, "Address": value1, "Salud": value2, "DV": value3 })
                         .then((response) => {
                             setListData(response.data)
                             console.log("response.data", response.data);

@@ -1,3 +1,3 @@
 module.exports = {
-    API_HOST : 'http://localhost:5000'
+    API_HOST : 'https://chile-auth.onrender.com'
 }

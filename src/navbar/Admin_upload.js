@@ -40,7 +40,7 @@ const AdminUpload = () => {
             RUT: RUT,
             DV: DV
         };
-        axios.post('https://chile-back.onrender.com/students/create-student', studentObject)
+        axios.post('http://52.91.190.150:4000/students/create-student', studentObject)
             .then(res => console.log(res.data));
         SetNOMBRE('')
         SetDIRECCION('')

@@ -33,7 +33,7 @@ class AuthService {
   }
 
   loginWithNameAndPassword = (name, password) => new Promise((resolve, reject) => {
-    axios.post('https://chile-auth.onrender.com/api/signin', { name, password })
+    axios.post('http://52.91.190.150:5000/api/signin', { name, password })
       .then((response) => {
         if (response.data.user) {
           this.setSession(response.data.accessToken);
@@ -48,7 +48,7 @@ class AuthService {
   })
 
   loginInWithToken = () => new Promise((resolve, reject) => {
-    axios.post('https://chile-auth.onrender.com/api/account/me')
+    axios.post('http://52.91.190.150:5000/api/account/me')
       .then((response) => {
         if (response.data.user) {
           resolve(response.data.user);
@@ -66,7 +66,7 @@ class AuthService {
   }
 
   register = (firstname, lastname, email, password) => new Promise((resolve, reject) => {
-    axios.post('https://chile-auth.onrender.com/api/signup', {
+    axios.post('http://52.91.190.150:5000/api/signup', {
       firstname: firstname,
       lastname: lastname,
       email: email,

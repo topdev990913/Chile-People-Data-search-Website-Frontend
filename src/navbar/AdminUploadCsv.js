@@ -22,7 +22,7 @@ const AdminUploadCsv = () => {
         }
     }
     const handleFileSend = () => {
-        axios.post('https://chile-back.onrender.com/students/read-file', data, {
+        axios.post('http://52.91.190.150:4000/students/read-file', data, {
             headers: {
                 "Content-Type": "multipart/form-data",
             }

@@ -14,7 +14,7 @@ const SearchBarName12356 = ({ setListData }) => {
         <div className="searchbar_out" onKeyUp={(e) => {
             if (e.key === "Enter") {
                 console.log("-------------------")
-                axios.post('https://chile-back.onrender.com/students/temp12356', { "name": value, "Address": value1, "Common": value2, "Regeion": value3, "Fec_Nac": value4, "DV": value5 })
+                axios.post('http://52.91.190.150:4000/students/temp12356', { "name": value, "Address": value1, "Common": value2, "Regeion": value3, "Fec_Nac": value4, "DV": value5 })
                         .then((response) => {
                             setListData(response.data)
                             console.log("response.data", response.data);
@@ -48,7 +48,7 @@ const SearchBarName12356 = ({ setListData }) => {
             </div>
             <div style={{ display: "flex", justifyContent: "center", marginTop: "30px" }}>
                 <button className="searchButton1" onClick={() => {
-                    axios.post('https://chile-back.onrender.com/students/temp12356', { "name": value, "Address": value1, "Common": value2, "Regeion": value3, "Fec_Nac": value4, "DV": value5 })
+                    axios.post('http://52.91.190.150:4000/students/temp12356', { "name": value, "Address": value1, "Common": value2, "Regeion": value3, "Fec_Nac": value4, "DV": value5 })
                         .then((response) => {
                             setListData(response.data)
                             console.log("response.data", response.data);

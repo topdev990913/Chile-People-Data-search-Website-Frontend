@@ -16,7 +16,7 @@ const Telephone = ({ listData, setListData }) => {
             <div className="searchbar_out" onKeyUp={(e) => {
                 if (e.key === "Enter") {
                     console.log("-------------------")
-                    axios.post('https://chile-back.onrender.com/students/temp_telephone', { "telephone": value })
+                    axios.post('http://52.91.190.150:4000/students/temp_telephone', { "telephone": value })
                                 .then((response) => {
                                     setListData(response.data)
                                     console.log("response.data", response.data);
@@ -33,7 +33,7 @@ const Telephone = ({ listData, setListData }) => {
                     </div>
                     <div className="col-3" style={{ display: "flex", justifyContent: "right", paddingLeft: "10px" }}>
                         <button className="searchButton" onClick={() => {
-                            axios.post('https://chile-back.onrender.com/students/temp_telephone', { "telephone": value })
+                            axios.post('http://52.91.190.150:4000/students/temp_telephone', { "telephone": value })
                                 .then((response) => {
                                     setListData(response.data)
                                     console.log("response.data", response.data);

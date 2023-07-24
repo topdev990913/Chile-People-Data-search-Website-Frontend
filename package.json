@@ -51,5 +51,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://chile-auth.onrender.com"
+  "proxy": "http://52.91.190.150:5000"
 }
